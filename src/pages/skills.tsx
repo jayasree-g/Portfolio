@@ -31,7 +31,7 @@ const skillsData = [
   },
 ];
 
-function Skills() {
+function Skills(props: { darkMode: boolean }) {
   return (
     <div className=" text-white flex flex-col justify-center items-center">
       <div className="text-center text-3xl font-bold mb-6">Skills</div>
@@ -39,7 +39,9 @@ function Skills() {
         {skillsData.map((category) => (
           <div
             key={category.category}
-            className=" p-4 rounded-lg shadow-md bg-[#925bff] w-[250px]"
+            className={`p-4 rounded-lg shadow-md w-[250px] hover:scale-105 duration-300 ${
+              props.darkMode ? "bg-[#292929]" : "bg-[#925bff]"
+            }`}
           >
             <h2 className="text-lg font-semibold mb-3">{category.category}</h2>
             <ul className="mb-2">

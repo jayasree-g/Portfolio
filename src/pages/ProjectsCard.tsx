@@ -9,11 +9,12 @@ interface Project {
 
 interface ProjectCardProps {
   project: Project;
+  darkMode: boolean;
 }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ project, darkMode }: ProjectCardProps) {
   return (
-    <div className="rounded-lg shadow-lg p-6 max-w-sm text-white transform hover:scale-105 transition-transform duration-300">
+    <div className={`rounded-lg shadow-lg p-6 max-w-sm text-white hover:scale-105 duration-300 ${darkMode ? "bg-[#292929]" : ""}`}>
       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
       <p className="mb-4">{project.description}</p>
       <div className="flex justify-between ">
@@ -29,7 +30,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           href={project.liveDemoLink}
           target="_blank"
           rel="noopener noreferrer"
-          className=" hover:underline"
+          className="hover:underline"
         >
           Live Demo
         </a>

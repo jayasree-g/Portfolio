@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectsCard";
 
-function Projects() {
+function Projects(props: { darkMode: boolean }) {
   const projects = [
     {
       title: "LanguageConnect - Interactive Language Learning Web App",
@@ -24,11 +24,15 @@ function Projects() {
   ];
 
   return (
-    <div className=" text-white py-10">
+    <div className={`py-10 text-white`}>
       <div className="text-center text-3xl font-bold mb-6">My Projects</div>
       <div className="flex justify-center gap-4">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard
+            key={index}
+            project={project}
+            darkMode={props.darkMode}
+          />
         ))}
       </div>
     </div>
