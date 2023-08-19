@@ -1,0 +1,81 @@
+/* src/styles.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid transparent;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@layer utilities {
+  /* scrollbar utility  */
+  /* scrollbar styles for firefox */
+  .scroll {
+    scrollbar-width: thin;
+  }
+  .scroll-light {
+    background-color: #c0c0c0 #c0c0c020;
+  }
+  .scroll-dark {
+    background-color: #c0c0c0 #c0c0c020;
+  }
+
+  /* scrollbar styles for browsers other than firefox */
+  .scroll::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-clip: content-box;
+  }
+  .scroll::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+  .scroll::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .scroll-light::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border: 4px solid transparent;
+  }
+  .scroll-light::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+
+  .scroll-dark::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border: 4px solid transparent;
+  }
+  .scroll-dark::-webkit-scrollbar-thumb:active {
+    background-color: #eeeeee;
+  }
+}
