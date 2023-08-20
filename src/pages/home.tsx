@@ -11,8 +11,8 @@ function Home() {
     <div
       className={
         darkMode
-          ? `bg-[#191919]`
-          : `bg-gradient-to-r from-blue-400 to-purple-600`
+          ? `bg-[#191919] p-4`
+          : `bg-gradient-to-r from-blue-400 to-purple-600 p-4`
       }
     >
       <div className="flex justify-end p-4 items-baseline">
@@ -37,7 +37,7 @@ function Home() {
           Light
         </span>
       </div>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex flex-wrap justify-center items-center h-screen">
         <div className="text-center text-white">
           <div className="text-2xl font-semibold mb-2">Hello, I'm</div>
           <div className="text-4xl font-bold mb-4">Jayasree Gondipalle</div>
@@ -91,7 +91,7 @@ function Home() {
         <Projects darkMode={darkMode} />
       </div>
       <Skills darkMode={darkMode} />
-      <div className="flex ">
+      <div className="flex flex-wrap ">
         <WorkExperience darkMode={darkMode} />
         <Education darkMode={darkMode} />
       </div>

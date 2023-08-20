@@ -35,7 +35,7 @@ function Skills(props: { darkMode: boolean }) {
   return (
     <div className=" text-white flex flex-col justify-center items-center">
       <div className="text-center text-3xl font-bold mb-6">Skills</div>
-      <div className="flex gap-6 ">
+      <div className="flex flex-wrap justify-center gap-6 ">
         {skillsData.map((category) => (
           <div
             key={category.category}

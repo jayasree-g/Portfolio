@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectsCard";
-import gaming from '../Images/gaming.png'
+import gaming from "../Images/gaming.png";
 
 function Projects(props: { darkMode: boolean }) {
   const projects = [
@@ -29,7 +29,7 @@ function Projects(props: { darkMode: boolean }) {
   return (
     <div className={`py-10 text-white`}>
       <div className="text-center text-3xl font-bold mb-6">My Projects</div>
-      <div className="flex justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
