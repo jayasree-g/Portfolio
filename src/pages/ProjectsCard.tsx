@@ -2,6 +2,7 @@ import React from "react";
 
 interface Project {
   title: string;
+  image: string;
   description: string;
   githubLink: string;
   liveDemoLink: string;
@@ -19,7 +20,9 @@ function ProjectCard({ project, darkMode }: ProjectCardProps) {
         darkMode ? "bg-[#1e1e1e] border border-[#323434]" : ""
       }`}
     >
-      {/* <img src={project.image} alt="languageConnect" /> */}
+      <div className=" max-h-[222px] overflow-hidden">
+        <img src={project.image} alt="image" />
+      </div>
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
         <p className="mb-4">{project.description}</p>
