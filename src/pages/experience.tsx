@@ -29,7 +29,7 @@ const workExperiences = [
 
 function WorkExperience(props: { darkMode: boolean }) {
   return (
-    <div className="flex flex-col gap-6 max-w-md mx-auto text-white mt-20">
+    <div className="flex flex-col gap-6 max-w-lg mx-auto text-white mt-20">
       <div className="text-center text-3xl font-bold ">Experience</div>
       {workExperiences.map((experience, index) => (
         <ExperienceCard key={index} experience={experience} darkMode={props.darkMode} />

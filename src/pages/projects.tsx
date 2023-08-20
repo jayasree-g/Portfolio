@@ -1,16 +1,19 @@
 import React from "react";
 import ProjectCard from "./ProjectsCard";
+import gaming from '../Images/gaming.png'
 
 function Projects(props: { darkMode: boolean }) {
   const projects = [
     {
       title: "LanguageConnect - Interactive Language Learning Web App",
+      // image: "https://www.edtechreview.in/wp-content/uploads/best-language-learning-apps.jpg",
       description: "Developed a language learning web app enabling users...",
       githubLink: "https://github.com/jayasree-g/LanguageConnect",
       liveDemoLink: "https://www.example.com/language-connect",
     },
     {
       title: "NostalgiPlay - Multi-Game Platform",
+      // image: {gaming},
       description: "A platform that features a variety of interactive games...",
       githubLink: "https://github.com/jayasree-g/Games",
       liveDemoLink: "https://www.example.com/nostalgiplay",

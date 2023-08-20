@@ -39,18 +39,22 @@ function Skills(props: { darkMode: boolean }) {
         {skillsData.map((category) => (
           <div
             key={category.category}
-            className={`p-4 rounded-lg shadow-md w-[250px] hover:scale-105 duration-300 ${
-              props.darkMode ? "bg-[#292929]" : "bg-[#925bff]"
+            className={`p-4 shadow-md w-[250px] hover:scale-105 duration-300 ${
+              props.darkMode
+                ? "bg-[#1e1e1e] border border-[#323434]"
+                : "bg-[#925bff]"
             }`}
           >
-            <h2 className="text-lg font-semibold mb-3">{category.category}</h2>
-            <ul className="mb-2">
+            <h2 className="text-lg font-semibold mb-4">{category.category}</h2>
+            <ul className="mb-3">
               {category.skills.map((skill) => (
-                <li key={skill.name} className="items-center mb-2">
+                <li key={skill.name} className="items-center py-3">
                   <span>{skill.name}</span>
-                  <div className="flex-1 h-2 bg-gray-200 rounded-lg">
+                  <div className="flex-1 h-2 bg-gray-200">
                     <div
-                      className="h-full bg-[#363535] rounded-lg"
+                      className={`h-full ${
+                        props.darkMode ? `bg-[#186d67]` : `bg-[#363535]`
+                      }`}
                       style={{ width: `${skill.percentage}%` }}
                     ></div>
                   </div>

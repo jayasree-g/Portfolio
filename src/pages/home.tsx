@@ -4,15 +4,14 @@ import Projects from "./projects";
 import Skills from "./skills";
 import WorkExperience from "./experience";
 import Education from "./education";
-import Switches from "@foundationcomponentrepo/switches";
 
 function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   return (
     <div
       className={
         darkMode
-          ? `bg-[#000000]`
+          ? `bg-[#191919]`
           : `bg-gradient-to-r from-blue-400 to-purple-600`
       }
     >
@@ -92,7 +91,7 @@ function Home() {
         <Projects darkMode={darkMode} />
       </div>
       <Skills darkMode={darkMode} />
-      <div className="flex">
+      <div className="flex ">
         <WorkExperience darkMode={darkMode} />
         <Education darkMode={darkMode} />
       </div>
